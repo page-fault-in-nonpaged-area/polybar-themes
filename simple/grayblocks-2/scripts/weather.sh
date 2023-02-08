@@ -5,7 +5,8 @@ weather="$(echo "$weather_raw" |\
     sed 's/☀️/Sunny/g' |\
     sed 's/☁️/Cloudy/g' |\
     sed 's/🌧️/Rainy/g' |\
-    sed 's/🌦️/Partly Sunny/g' |\
+    sed 's/⛅️/Partly Sunny/g' |\
+    sed 's/🌦️/Sun and Rain/g' |\
     sed 's/🌤️/Partly Cloudy/g' |\
     sed 's/🌩️/Thunderstorm/g' |\
     sed 's/🌫️/Foggy/g' |\

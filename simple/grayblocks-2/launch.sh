@@ -2,7 +2,7 @@
 
 # Add this script to your wm startup file.
 
-DIR="$HOME/.config/polybar/grayblocks-top"
+DIR="$HOME/.config/polybar/grayblocks-2"
 
 # Terminate already running bar instances
 killall -q polybar
@@ -14,4 +14,5 @@ while pgrep -u $UID -x polybar >/dev/null; do sleep 1; done
 
 echo "HERE"
 
-polybar -q main -c "$DIR"/config.ini &
+polybar -q top -c "$DIR"/config.ini &
+polybar -q bottom -c "$DIR"/config.ini &

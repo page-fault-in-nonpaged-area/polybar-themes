@@ -1,19 +1,19 @@
 #!/usr/bin/env bash
 
 # Color files
-PFILE="$HOME/.config/polybar/grayblocks-bottom/colors.ini"
-RFILE="$HOME/.config/polybar/grayblocks-bottom/scripts/rofi/colors.rasi"
+PFILE="$HOME/.config/polybar/grayblocks-2/colors.ini"
+RFILE="$HOME/.config/polybar/grayblocks-2/scripts/rofi/colors.rasi"
 
 # Change colors
 change_color() {
 	# polybar
-	sed -i -e 's/background = #.*/background = #272727/g' $PFILE
-	sed -i -e 's/background-alt = #.*/background-alt = #383838/g' $PFILE
-	sed -i -e 's/foreground = #.*/foreground = #CACACA/g' $PFILE
-	sed -i -e 's/foreground-alt = #.*/foreground-alt = #CACACA/g' $PFILE
+	sed -i -e 's/background = #.*/background = #FFFFFF/g' $PFILE
+	sed -i -e 's/background-alt = #.*/background-alt = #E7E7E7/g' $PFILE
+	sed -i -e 's/foreground = #.*/foreground = #0a0a0a/g' $PFILE
+	sed -i -e 's/foreground-alt = #.*/foreground-alt = #0a0a0a/g' $PFILE
 	sed -i -e "s/primary = #.*/primary = $AC/g" $PFILE
-	sed -i -e 's/red = #.*/red = #EF5350/g' $PFILE
-	sed -i -e 's/yellow = #.*/yellow = #FFEE58/g' $PFILE
+	sed -i -e 's/red = #.*/red = #B71C1C/g' $PFILE
+	sed -i -e 's/yellow = #.*/yellow = #F57F17/g' $PFILE
 	
 	# rofi
 	cat > $RFILE <<- EOF
@@ -21,10 +21,10 @@ change_color() {
 
 	* {
 	  al:   #00000000;
-	  bg:   #272727FF;
-	  bga:  #383838FF;
-	  fga:  #CACACAFF;
-	  fg:   #CACACAFF;
+	  bg:   #FFFFFFFF;
+	  bga:  #E7E7E7FF;
+	  fga:  #0a0a0aFF;
+	  fg:   #0a0a0aFF;
 	  ac:   ${AC}FF;
 	}
 	EOF
