@@ -49,6 +49,10 @@ elif [[ "$1" == "--grayblocks" ]]; then
 	style="grayblocks"
 	launch_bar
 
+elif [[ "$1" == "--grayblocks-2" ]]; then
+	style="grayblocks-2"
+	launch_bar
+
 elif [[ "$1" == "--blocks" ]]; then
 	style="blocks"
 	launch_bar
@@ -77,5 +81,6 @@ else
 	--blocks    --colorblocks    --cuts      --docky
 	--forest    --grayblocks     --hack      --material
 	--panels    --pwidgets       --shades    --shapes
+	--grayblocks-2
 	EOF
 fi
