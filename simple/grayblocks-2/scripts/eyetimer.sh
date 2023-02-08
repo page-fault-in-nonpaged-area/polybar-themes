@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
-TIMER_FILE="$HOME/.config/polybar/grayblocks-bottom/scripts/eyetimer"
-AUDIO_LOCK="$HOME/.config/polybar/grayblocks-bottom/scripts/eyetimer-play"
+TIMER_FILE="$HOME/.config/polybar/grayblocks-2/scripts/eyetimer"
+AUDIO_LOCK="$HOME/.config/polybar/grayblocks-2/scripts/eyetimer-play"
 
 COLOR_GOOD="#2ECC71"
 COLOR_WARN="#F1C40F"
@@ -10,6 +10,9 @@ COLOR_IDLE="#2C3E50"
 BAR_CHAR="■"
 
 NUM_EPOCHES=264 # 264 * 5 seconds = 22 minutes
+
+# program supports 2 modes, display and set
+# Get command line arguments
 
 if [ ! -f "$TIMER_FILE" ]; then
     echo $NUM_EPOCHES > "$TIMER_FILE"
