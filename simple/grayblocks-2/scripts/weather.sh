@@ -1,4 +1,4 @@
-#!/usr/bin/env bash
+#!/usr/bin/env bash  
 
 weather_raw="$(curl -s wttr.in?format="%c+%t+%u")"
 weather="$(echo "$weather_raw" |\
@@ -9,6 +9,7 @@ weather="$(echo "$weather_raw" |\
     sed 's/🌦️/Sun and Rain/g' |\
     sed 's/🌤️/Partly Cloudy/g' |\
     sed 's/🌩️/Thunderstorm/g' |\
+    sed 's/🌦/Sun and Rain/g' |\
     sed 's/🌫️/Foggy/g' |\
     sed 's/🌬️/Windy/g')"
 
